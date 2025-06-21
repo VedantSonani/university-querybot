@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Engineering</title>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +1234567890</span>
+                <span><i class="fas fa-envelope"></i> info@university.edu</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="University Logo" class="logo">
+            <div class="header-right">
+                <a href="#" class="btn">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Infrastructure</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Slider Section -->
+    <section class="slider">
+        <!-- <img src="{{ url_for('static', filename='images/uni.jpg') }}"> -->
+    </section>
+
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-content">
+            <span class="ticker-label">Latest News</span>
+            <span class="ticker-news">Admissions Open for 2024-25 Academic Year | New Research Center Inauguration | Upcoming Technical Symposium</span>
+        </div>
+    </div>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <h2 class="section-title">Our Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <i class="fas fa-laptop-code fa-3x"></i>
+                <h3>Computer Science</h3>
+                <p>B.Tech in Computer Science and Engineering</p>
+            </div>
+            <div class="program-card">
+                <i class="fas fa-cogs fa-3x"></i>
+                <h3>Mechanical</h3>
+                <p>B.Tech in Mechanical Engineering</p>
+            </div>
+            <div class="program-card">
+                <i class="fas fa-bolt fa-3x"></i>
+                <h3>Electrical</h3>
+                <p>B.Tech in Electrical Engineering</p>
+            </div>
+            <div class="program-card">
+                <i class="fas fa-industry fa-3x"></i>
+                <h3>Civil</h3>
+                <p>B.Tech in Civil Engineering</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Interface -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        💬
+    </div>
+
+    <div id="chat-container">
+        <div class="chat-header">
+            <span>Chat with Us</span>
+            <button onclick="toggleChat()">×</button>
+        </div>
+        <div id="chat-display"></div>
+        <div id="user-input">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
